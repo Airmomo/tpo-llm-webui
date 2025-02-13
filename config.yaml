@@ -1,0 +1,23 @@
+# vLLM服务配置
+vllm:
+  model_path: "/model/HuggingFace/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B"
+  dtype: "auto"
+  api_key: "token-abc123"
+  tensor_parallel_size: 2
+  max_model_len: 59968
+  port: 8000
+
+# TPO优化配置
+tpo:
+  data_path: "data/sample.json"
+  ip: "0.0.0.0"
+  port: 8000
+  server_model: "/model/HuggingFace/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B"
+  reward_model: "/model/HuggingFace/sfairXC/FsfairX-LLaMA3-RM-v0.1"
+  tpo_mode: "tpo"
+  max_tokens_response: 2048
+  max_tokens_all: 8192
+  sample_size: 5
+  seed: 7
+  max_iterations: 2
+  num_threads: 4
