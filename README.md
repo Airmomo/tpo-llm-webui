@@ -65,11 +65,11 @@
 | **DeepSeek-R1-Distill-Qwen-32B**  | 64 GB                | 4090 3卡| 3                            |
 | **DeepSeek-R1-Distill-Llama-70B** | 140 GB               | 4090 4卡| 4                            |
 
-如果你的 GPU 预算不高，也可以选择小一些的模型`DeepSeek-R1-Distill-Qwen-7B`，按需选择配置后再`立即部署`。
-
 ![UCloud_mirror_ini_GPU-4](https://s2.loli.net/2025/02/14/GYMvsRPN1ImgULb.png)
 
 这里我选用 DeepSeek 的`DeepSeek-R1-Distill-Qwen-14B` 模型作为基础模型来获取更有性价比的运行结果，它需要**最低配置 4090 4卡**的运行环境下面的步骤都以该基础模型为例，如有出入请自行按说明修改参数配置。
+
+如果你的 GPU 预算不高，也可以选择使用较小的模型如`DeepSeek-R1-Distill-Qwen-7B`，按需选择 GPU 配置后再`立即部署`。
 
 #### 3. 启动实例
 
@@ -124,7 +124,7 @@ cd ..
 - 基础模型：https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B
 - 奖励模型：https://huggingface.co/sfairXC/FsfairX-LLaMA3-RM-v0.1
 
-当然你也可以选择下载其他大语言模型（LLM）作为基础模型或其他奖励模型进行优化训练，但是需要根据自己的配置需求来选择合适的模型。
+当然你也可以选择下载其他大语言模型（LLM）作为基础模型或其他奖励模型进行优化训练，**你可以在'config.yaml'中修改使用的模型**（本地路径或远程 HuggingFace 仓库的标识符），但是要注意根据自己的 GPU 配置来选择合适的模型，量力而行！
 
 ## 3. 启动 vLLM 服务
 
