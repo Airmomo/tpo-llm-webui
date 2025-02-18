@@ -44,7 +44,7 @@
 
 ## 1. 一键部署实例
 
-**TPO-LLM-WebUI 镜像发布页**：待发布
+**TPO-LLM-WebUI 镜像发布页**：<https://www.compshare.cn/images-detail?ImageID=compshareImage-18jp6iuyn436&ytag=GPU_hych_Lcsdn_csdn_display>
 
 > 【免费送你算力金】通过镜像发布页或下方链接注册可以额外获得40算力金，免费体验20小时顶配4090显卡，企业或高校认证后有95折和额外10元算力金。
 > <https://passport.compshare.cn/register?referral_code=4sOb83sEXe4BLkKYqw9G4P&ytag=GPU_hych_Lcsdn_csdn_display>
