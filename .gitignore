@@ -171,3 +171,4 @@ cython_debug/
 .pypirc
 
 .DS_Store
+README_mirror.md
