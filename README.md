@@ -154,7 +154,7 @@ vllm serve /model/HuggingFace/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B \
 | `--enforce-eager`        | 强制使用 eager 模式，便于调试，这里可不开启。                                      |
 | `--port 8000`            | 指定服务监听的端口号为 8000。                                        |
 
-## 5. 运行 TPO-LLM-WebUI 的注意事项
+## 4. 运行 TPO-LLM-WebUI 的注意事项
 
 一般情况下 TPO 框架建议在单机单GPU环境中运行。若服务器资源足够，你也尝试可以在同一环境中运行。
 
@@ -171,9 +171,9 @@ watch -n 1 nvidia-smi
 export CUDA_VISIBLE_DEVICES=2,3
 ```
 
-## 6. 运行 TPO 优化模型输出
+## 5. 运行 TPO 优化模型输出
 
-## 运行方式一：运行 TPO-LLM-WebUI（实时优化模型和展示输出结果）
+### 运行方式一：运行 TPO-LLM-WebUI（实时优化模型和展示输出结果）
 
 `TPO-LLM-WebUI` 服务默认通过 `7860` 端口进行访问，详细可查看`gradio_app.py`，镜像已经配置了端口转发。
 
@@ -192,7 +192,7 @@ python gradio_app.py
 
 ![tpo_result](https://s2.loli.net/2025/02/13/VCidEf1m8Wv2GOS.png)
 
-## 运行方式二：手动执行 TPO 脚本（类似预训练的优化方式）
+### 运行方式二：手动执行 TPO 脚本（类似预训练的优化方式）
 
 在终端输入以下命令以执行 TPO 脚本，该脚本会先加载一个奖励模型（预计耗时1～2分钟）与作为 vLLM 服务器部署的策略模型进行交互：
 
